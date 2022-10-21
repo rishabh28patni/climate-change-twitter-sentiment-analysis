@@ -12,7 +12,7 @@ import json
 query = "climate change"
 max_results = 10
 
-query_params = {'query': query,'tweet.fields': 'text, author_id, created_at', 'max_results': max_results}
+query_params = {'query': query,'tweet.fields': 'text', 'max_results': max_results}
 
 
 

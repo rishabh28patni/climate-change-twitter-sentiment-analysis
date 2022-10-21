@@ -7,12 +7,15 @@ Created on Wed Oct 19 15:47:03 2022
 """
 
 import requests
-import os
 
 
 
+BEARER_TOKEN = ""
 
-BEARER_TOKEN = os.environ.get("<insert token>")
+
+
+def connect_to_twitter():
+    return {"Authorization": "Bearer {}".format(BEARER_TOKEN)}
 
 def bearer_oauth(r):
     """
