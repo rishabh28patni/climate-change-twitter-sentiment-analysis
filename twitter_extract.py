@@ -30,10 +30,9 @@ def bearer_oauth(r):
 
 def search_twitter(query_params):
 
-    url = "https://api.twitter.com/2/tweets/search/recent"
+    url = "https://api.twitter.com/2/tweets/search/all"
 
     response = requests.request("GET", url, auth=bearer_oauth, params = query_params)
-    print(response.status_code)
 
     if response.status_code != 200:
         raise Exception(response.status_code, response.text)
