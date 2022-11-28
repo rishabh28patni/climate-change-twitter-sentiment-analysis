@@ -7,7 +7,9 @@ There are two parts to running the code on this repository: the data generation 
 
 ## Running Code
 To start off, clone the repository locally. Then, in your local terminal, cd your way to the repository and run the following command: 
-<pip install -r requirements.txt>
+```
+pip install -r requirements.txt
+```
 This will install all the libraries needed to run the code locally. 
 
 After this, open the main.py file. In the main.py file, you can set the query parameters, start_date, end_date, the max number of tweets you can return, and a location parameter used for naming the downloaded file. Note that this query only generates one file, and you'll need to run multiple queries if you're looking for more information. Also fill out your local bearer token. 
