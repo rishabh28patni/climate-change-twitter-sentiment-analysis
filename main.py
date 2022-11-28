@@ -16,9 +16,9 @@ query = 'has:geo -is:retweet -is:nullcast (place_country:US) ("climate change" O
 start_date = '2020-01-01T00:00:00Z'
 end_date = '2022-01-01T00:00:00Z'
 max_tweets = 500
-location = "kundi"
+location = ""
 ## Bearer token given by twitter API to access endpoints
-bearer_token = "AAAAAAAAAAAAAAAAAAAAAG02jAEAAAAA%2FjtT6P5mTWcckqzbNUJIKcvGtuQ%3Dhr2dP3gkRpMftoDUxVltzaThOganemXo5s52O4HqtpsnrnwgJp"
+bearer_token = ""
 #flag for if we need to run query. if false, then just processes data in /data_output/
 generate_data = True
 
