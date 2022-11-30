@@ -62,9 +62,9 @@ def data_processing():
         print("done textblob")
         
         # Apply SentimentIntensityAnalysis model 
-        data["nltk_sentiment_category"] = data["cleaned_tweet"].apply(lambda tweet: SentimentIntensityAnalyzer().polarity_scores(tweet))
-        data["nltk_sentiment_category"] = data["nltk_sentiment_category"].apply(lambda analysis: "positive" if analysis["compound"] > 0.05 
-                                                                                else ("negative" if analysis["compound"] < -0.05 else "neutral"))
+        data["nltk_sentiment_compound_score"] = data["cleaned_tweet"].apply(lambda tweet: SentimentIntensityAnalyzer().polarity_scores(tweet)["compound"])
+        data["nltk_sentiment_category"] = data["nltk_sentiment_compound_score"].apply(lambda analysis: "positive" if analysis > 0.05 
+                                                                                else ("negative" if analysis < -0.05 else "neutral"))
         print("model running done")
         
         # Export processed result to csv
